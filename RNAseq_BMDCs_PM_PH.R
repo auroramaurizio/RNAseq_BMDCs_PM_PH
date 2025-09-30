@@ -37,6 +37,8 @@ rownames(metadata) <- metadata$Sample.Name
 annotation <- c('GeneID','Chr','Start','End','Strand','Length')
 fCounts <- read.delim(file=my_filecount, header=TRUE, check.names = F)
 
+rownames(fCounts) <- fCounts$Geneid
+
 fCountsData <- fCounts[
   , 
   -which(
@@ -51,9 +53,6 @@ fCountsAnnotation <- fCounts[
     %in% 
       tolower(annotation))]
 
-geneidColname <- 'Geneid'
-geneidIdx <- which(tolower(annotation) %in% tolower(geneidColname))
-rownames(fCountsData) <- fCounts[[geneidIdx]]
 
 fCountsData <- fCountsData[,match(metadata[,1], colnames(fCountsData))] 
 
