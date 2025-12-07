@@ -5,4 +5,4 @@ Microbiome modulation uncouples efficacy and toxicity induced by immune checkpoi
 
 [![DOI](https://zenodo.org/badge/1064157106.svg)](https://doi.org/10.5281/zenodo.17234615)
 
-RNAseq data have been deposited in GEO and are available under accession number GSE306088. 
+RNAseq counts data have been deposited in GEO and are available under accession number GSE306088. 
